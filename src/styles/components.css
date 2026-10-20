@@ -1,0 +1,57 @@
+﻿/* Wortmarke und Navigation */
+.brand { display: inline-flex; align-items: center; gap: 24px; font-size: 23px; font-weight: 750; letter-spacing: .07em; }
+.brand-logo { width: 48px; height: 48px; object-fit: contain; flex-shrink: 0; mix-blend-mode: screen; mask-image: radial-gradient(ellipse at center, #000 62%, transparent 72%); }
+.brand span { color: var(--color-muted); border-left: 1px solid var(--color-line); padding-left: 24px; font-size: 14px; font-weight: 400; letter-spacing: 0; }
+.site-header nav a:hover { color: var(--color-accent); }
+.nav-cta { border: 1px solid #d4ac6166; padding: 8px 16px; border-radius: 3px; }
+.nav-cta span { margin-left: 12px; }
+.menu-toggle { display: none; color: var(--color-text); border: 1px solid var(--color-line); border-radius: 3px; padding: 8px 12px; background: transparent; font-size: 15px; }
+
+/* Aktionen haben dieselbe Höhe, Schrift und Rundung. */
+.button, .social-button { display: inline-flex; align-items: center; justify-content: center; gap: 16px; min-height: 50px; max-width: 100%; padding: 12px 20px; border: 1px solid transparent; border-radius: 3px; font: inherit; font-size: 16px; font-weight: 600; line-height: 1.5; transition: background .2s, border-color .2s; }
+.button-primary { background: var(--color-accent); color: var(--color-on-accent); }
+.button-primary:hover { background: var(--color-accent-hover); }
+.text-link { display: inline-flex; align-items: center; gap: 12px; min-height: 50px; font-size: 16px; color: var(--color-muted); }
+.text-link:hover { color: var(--color-text); }
+
+/* Inhalte ohne dekorative Nummern und Kartenrahmen. */
+.principle { padding: 24px 0; border-bottom: 1px solid var(--color-line); }
+.principle:first-child { padding-top: 0; }
+.principle:last-child { border-bottom: 0; padding-bottom: 0; }
+.principle p { color: var(--color-muted); margin-top: 10px; }
+.requirements h3 { margin-bottom: 16px; }
+.requirements p { color: var(--color-muted); max-width: 65ch; }
+.requirements p + p { margin-top: 16px; }
+.trial-panel { border-top: 1px solid var(--color-line); margin-top: 32px; padding-top: 32px; }
+.trial-panel p { color: var(--color-muted); margin-top: 12px; }
+.trial-panel .button { margin-top: 24px; }
+.faq-list details { border-bottom: 1px solid var(--color-line); }
+.faq-list summary { list-style: none; padding: 20px 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; font-size: 17px; font-weight: 500; }
+.faq-list details:first-child summary { padding-top: 0; }
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary span { font-size: 22px; color: var(--color-accent); }
+.faq-list details[open] summary span { transform: rotate(45deg); }
+.faq-list details p { color: var(--color-muted); padding: 0 24px 24px 0; }
+
+/* Plattform-Logos bleiben erkennbar; die Buttons folgen dem Seitendesign. */
+.social-links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 24px; }
+.social-link { max-width: 100%; }
+.social-button { background: transparent; border-color: #ffffff35; color: var(--color-text); }
+.social-button img { flex-shrink: 0; width: 22px; height: 22px; }
+.social-button--discord { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); }
+.social-button--discord img { filter: brightness(0); opacity: .85; }
+.social-button[href]:hover { background: #ffffff0c; border-color: var(--color-accent); }
+.social-button--discord[href]:hover { background: var(--color-accent-hover); }
+.social-button:disabled { cursor: not-allowed; }
+.social-note { display: block; margin-top: 6px; font-size: 13px; color: var(--color-muted); }
+.social-arrow { margin-left: 4px; }
+.footer-brand { font-size: 20px; font-weight: 750; letter-spacing: .07em; }
+.site-footer > div:first-child p { margin-top: 6px; }
+.back-top { font-size: 14px; white-space: nowrap; color: var(--color-muted); }
+.back-top:hover { color: var(--color-text); }
+@media (max-width: 760px) {
+  .menu-toggle { display: block; flex-shrink: 0; }
+  .site-header { gap: 16px; }
+  .brand { gap: 12px; font-size: 20px; }
+  .brand-logo { width: 42px; height: 42px; }
+}
